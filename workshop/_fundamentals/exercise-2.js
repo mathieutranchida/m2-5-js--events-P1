@@ -7,9 +7,16 @@
 
 const combineArrays = (arr1, arr2) => {
   // Insert missing solution please
+  let combinedArrays = arr1.concat(arr2);
+  combinedArrays.every((str) => {
+    return typeof str === "string";
+  });
+  let sortedArrays = combinedArrays.sort();
+  return sortedArrays;
 };
 
 // 2. Do a console.log to verify your function.
+console.log(combineArrays(["crisp", "bacon"], ["zuchini", "apple"]));
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.

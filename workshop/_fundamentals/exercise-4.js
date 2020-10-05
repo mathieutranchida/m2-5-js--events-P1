@@ -7,10 +7,28 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let newArray = [];
+  let nullError = "null";
+
+  arr.forEach((element) => {
+    if (typeof key === "string" || typeof key === "number") {
+      newArray.push(element[key]);
+    } else {
+      return nullError;
+    }
+  });
+  return newArray;
 };
 
 // 2. Do a console.log to verify your function.
-
+console.log(
+  getValues([
+    { name: "chris", age: 23 },
+    { name: "liv", age: 36 },
+    { name: "dave", age: 43 },
+    "age",
+  ])
+);
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.
